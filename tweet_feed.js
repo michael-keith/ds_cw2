@@ -25,6 +25,8 @@ var client = new Twitter({
 });
 
 //Stall checker
+// I find that sometimes, in periods of no activity, the stream can timeout, so if there are not tweets for a set period restart this script.
+// This script would also ideally be run using forever or another monitoring tool which will automatically restart it when killed.
 var time;
 setInterval(function(){
   
